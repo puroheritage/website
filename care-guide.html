@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puro Heritage</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="assets/bootstrap-5/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="assets/bootstrap-5/js/bootstrap.js"></script>
+</head>
+<body class="bg-cream d-flex flex-column min-vh-100">
+    
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="">
+        <i class="fa-solid fa-arrow-up text-white"></i>
+    </button>
+    
+<header class="position-sticky top-0 z-2">
+    
+    <section class="py-2 bg-teal-color text-beige-color d-none d-md-block">
+    <div class="container">
+        <div class="row small px-5 justify-content-between">
+        <div class="col-md-6">
+            <a href="tel :123 456 8900" class="text-beige-color">
+                <i class="bi bi-telephone-fill me-2 text-beige-color"></i>
+            Call Us: 123 456 8900</a>
+            <span class="ms-4">|</span>
+            <i class="bi bi-geo-alt-fill me-2 ms-4 text-beige-color"></i>
+            Location: New Delhi, India
+        </div>
+        <div class="social-login col-md-6 text-right text-beige-color">
+            <span class="me-3">Sign up and GET 25% OFF on your first order.</span>
+            <a href="login.html" class="text-beige-color text-decoration-none fw-bold me-3 hover-text-teal">Sign Up Now</a>
+            <a href="#">
+                <i class="bi bi-facebook mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-twitter mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-instagram mx-1 text-beige-color"></i>
+            </a>
+        </div>
+            </div>
+    </div>
+</section>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand text-uppercase logo" href="#">
+                <img src="assets/images/logo-2.png" alt="" width="40px" class="img-fluid"/>
+                Puro Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-custom" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item navigation-link">
+                        <a href="index.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>Home</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item navigation-link">
+                        <a href="about-us.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>About Us</strong>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="products.html" class="nav-link text-uppercase rounded-5 mx-2"> <strong>Shop</strong> </a> </li>
+                    
+                    <li class="nav-item navigation-link dropdown"> <a href="#" class="nav-link text-uppercase dropdown-toggle rounded-5 mx-2" id="navbardropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <strong>Apparel</strong> </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li> <a href="products.html" class="dropdown-item">Men</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Women</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Co-ords</a> </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="contact-us.html" class=" nav-link text-uppercase rounded-5 mx-2"> <strong>contact</strong> </a> </li>
+                </ul>
+                <form class="d-flex">
+        <div class="search-container">
+        <input type="text" class="form-control search-input" placeholder="Search...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      </form>
+                <div class="d-flex"> <a href="wishlist.html" class="text-decoration-none text-teal-color ms-3 me-3"><i class="fa-regular fa-heart"></i></a> <a href="checkout.html" class="text-decoration-none text-teal-color"><i class="fa-solid fa-cart-shopping"></i></a> </div>
+            <a href="login.html" class="btn btn-creative px-4 ms-4">Login</a>
+            </div>
+            
+        </div>
+    </nav>
+    
+</header>
+  
+<section class="vh-100 hero-care-banner text-center d-flex align-items-center justify-content-center" style="background-image: url('assets/images/linen-care-banner.jpg');">
+    <div class="text-center animate__fade_in_down z-3">
+        <p class="fw-light mb-2 fw-bold text-beige-color">The Care Manifesto</p>
+        <h1 class="fw-bold display-1 text-beige-color">The Art of Care</h1>
+        <span class="scroll-prompt mt-5 animate__fade_in_up text-light">SCROLL TO DISCOVER</span>
+    </div>
+</section>
+    
+<section class="container">
+    <div id="philosophy" class="care-section pt-5 px-5 animate__slide_in_up">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <img src="assets/images/care-ethos-img.jpg" class="img-fluid shadow-lg hover-scale-img rounded-3" alt="Linen texture close-up">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div>
+                    <p class="text-teal-color mb-2">01 / The Ethos</p>
+                    <h3 class="fw-bold display-4 text-teal-color">A Pledge to Longevity</h3>
+                    <p class="mt-4 text-muted lead">Linen's journey to timelessness is only completed with your care. Unlike fast fashion, linen is designed to improve with every passing year, becoming softer, more pliable, and deeply personal. Treat it as an architectural investment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<div id="wash" class="care-section py-5 px-5 bg-light animate__slide_in_up">
+    <section class="container">
+        <p class="text-teal-color mb-2">02 / The Ritual</p>
+        <h3 class="fw-bold display-4 text-teal-color mb-5">The Gentle Wash</h3>
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="p-4 h-100 border-0 shadow-sm bg-white hover-up">
+                    <h4 class="fw-bold text-teal-color">KEY PRINCIPLES</h4>
+                    <ul class="list-unstyled mt-3 checklist-teal">
+                        <li>
+                            <i class="bi bi-water"></i>
+                            Temperature: Cold water only (Max 30°C).
+                        </li>
+                        <li>
+                            <i class="bi bi-droplet-half"></i>
+                            Detergent: Mild, liquid, pH-neutral.
+                        </li>
+                        <li>
+                            <i class="bi bi-x-circle"></i>
+                            Avoid: Bleach, softeners, and harsh scrubbing.
+                        </li>
+                        <li>
+                            <i class="bi bi-shuffle"></i>
+                            Action: Use the machine's gentle or delicate cycle.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-7">
+                <img src="assets/images/care-wash-img.jpg" class="img-fluid shadow-lg hover-scale-img rounded-3" alt="Hand washing linen">
+            </div>
+            
+        </div>
+    </section>
+</div>
+    
+<section class="container">
+    <div id="dry" class="care-section py-5 px-5 animate__slide_in_up">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-6">
+                <img src="assets/images/care-natural-drying-img.jpg" class="img-fluid shadow-lg hover-scale-img rounded-3" alt="Linen drying in the air">
+            </div>
+            <div class="col-md-6">
+                <p class="text-teal-color mb-2">03 / The Patience</p>
+                <h3 class="fw-bold display-4 text-teal-color mb-4">Natural Drying</h3>
+                <p class="lead mt-3 text-muted">The best way to achieve linen's signature softness is through natural air. Remove the garment from the dryer *before* it is fully dry, then hang or lay flat. This prevents the fibers from becoming brittle and avoids excessive shrinkage.</p>
+                <a href="#" class="text-teal-color text-decoration-none fw-bold d-inline-block mt-3">VIEW SOFTENING GUIDE →</a>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<div id="store" class="care-section py-5 px-5 animate__slide_in_up bg-light">
+    <section class="container">
+        <p class="text-teal-color mb-2">04 / The Preservation</p>
+        <h3 class="fw-bold display-4 text-teal-color mb-5">Pressing &amp; Storage</h3>
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="card p-4 h-100 border-0 shadow-sm hover-up">
+                    <h4 class="fw-bold text-teal-color">IRONING PROTOCOL</h4>
+                    <p class="mt-2 text-muted">Embrace the wrinkle, but if you must press, always iron on the **reverse side** while the fabric is still **damp** using the highest heat/steam setting.</p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <img src="assets/images/care-pressing-img.jpg" class="img-fluid shadow-lg hover-scale-img rounded-3" alt="Ironing a linen shirt">
+            </div>
+        </div>
+    </section>
+</div>
+    
+<section>
+    <div id="principles" class="care-section py-5 px-5 animate__slide_in_up">
+        <h3 class="fw-bold display-4 text-teal-color text-center mb-5">Key Principles</h3>
+        <div class="row g-4">
+            <div class="col-md-6 p-4 border-start border-5 border-success-subtle hover-up">
+                <h4 class="fw-bold text-success mb-3">DO's: Preserve Quality</h4>
+                <p class="small text-muted">Always store garments clean, dry, and on natural wood or padded hangers. Use white vinegar occasionally in the rinse cycle for natural softening.</p>
+            </div>
+            <div class="col-md-6 p-4 border-start border-5 border-danger-subtle hover-up">
+                <h4 class="fw-bold text-danger mb-3">DON'Ts: Avoid Damage</h4>
+                <p class="small text-muted">Never use chlorine bleach or fabric softeners. Avoid exposure to direct sunlight for long periods, especially for deep indigo dyes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<footer class="bg-teal-color text-beige-color pb-3 pt-5">
+    <section class="container px-5">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo-3.png" alt="Puro Heritage Logo" class="footer-logo me-3">
+                    <h5 class="fw-bold mb-0">PURO HERITAGE</h5>
+                </div>
+                <p class="small opacity-75 pe-4 text-beige-color">
+                    The finest European Flax woven into apparel that defines timelessness and enduring quality.
+                </p>
+                <div class="footer-social-icons fs-5 mt-3">
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-facebook text-beige-color"></i>
+                    </a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-twitter text-beige-color"></i>
+                    </a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-instagram text-beige-color"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="fw-bold mb-3">Customer Services</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">My Account</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Track Your Order</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">FAQ</a>  
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Returns</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Our Information</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li>
+                        <a href="about-us.html" class="text-beige-color text-decoration-none hover-text-teal-light">About us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                        <a href="care-guide.html" class="text-beige-color text-decoration-none hover-text-teal-light">Linen Care Guide</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Contact Info</h5>
+                <p class="small opacity-75 mb-1 text-beige-color">
+                    <a href="tel :123 456 7890">
+                        <i class="bi bi-telephone-fill me-2 text-beige-color"></i> +91-98765-43210
+                    </a>
+                </p>
+                <p class="font-lato small opacity-75 mb-1 text-beige-color">
+                    <a href="mailto :support@puroheritage.com">
+                        <i class="bi bi-envelope-fill me-2 text-beige-color"></i> support@puroheritage.com
+                    </a>
+                </p>    
+                <p class="font-lato small opacity-75 mt-3 text-beige-color">
+                    The Heritage Workshop,<br>
+                    14, Linen Quarter, <br>
+                    New Delhi, India
+                </p>
+            </div>
+        </div>
+ 
+    
+    <div class="copyright-bar py-3 mt-4 border-top border-teal-light">
+        <div class="container d-flex justify-content-between align-items-center small font-lato px-5">
+            <small>Copyright © 2025 PURO HERITAGE. All Rights Reserved.</small>
+            <div class="d-flex align-items-center">
+                <span class="me-3">English | ₹ INR</span>
+            </div>
+        </div>
+           </div>
+    </section>
+</footer>
+    
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. SCROLL ANIMATION (Intersection Observer)
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                
+                // Add show-element class to trigger CSS transition
+                element.classList.add('show-element');
+                
+                // --- Active Navigation Highlight ---
+                const id = element.getAttribute('id');
+                if (id) {
+                    // Remove 'active' from all links
+                    document.querySelectorAll('.care-nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    // Add 'active' to the current section's link
+                    const currentLink = document.querySelector(`.care-nav a[href="#${id}"]`);
+                    if (currentLink) {
+                        currentLink.classList.add('active');
+                    }
+                }
+            }
+        });
+    }, {
+        // Trigger when the section is at least 30% visible
+        threshold: 0.3 
+    });
+
+    // Observe all scroll-animated elements
+    document.querySelectorAll('.care-section, .animate__fade_in_down').forEach(element => {
+        // Set initial state for sections that need slide-up animation
+        if (element.classList.contains('animate__slide_in_up')) {
+            element.style.transform = 'translateY(50px)';
+        }
+        observer.observe(element);
+    });
+    
+    // Trigger initial hero animation immediately
+    document.querySelector('#hero').classList.add('show-element');
+});
+    </script>
+    
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+    
+</body>
+</html>

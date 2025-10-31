@@ -1,0 +1,1192 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    /* --- 1. BRAND COLORS (Based on #60181e) --- */
+    --color-maroon-default: #60181e; 
+    --color-maroon-hover:   #7d2027; 
+    --color-maroon-active:  #451115; 
+    --color-maroon-focus:   #91333a; 
+    --color-maroon-disabled: #c4a2a4; 
+
+    /* --- 2. SURFACE & TEXT COLORS (Based on #fffef1) --- */
+    --color-cream: #fffef1; 
+    --color-bg-main: var(--color-cream); 
+    --color-text-dark: #1a1a1a; 
+    --color-text-on-brand: var(--color-cream); 
+    --color-grey-subtle: #d3d3d3; 
+    
+    /* --- 3. TYPOGRAPHY --- */
+    --font-heading: 'MILEAST', serif; 
+    --font-body: 'Acumin', sans-serif; 
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* --- 4. SHADOWS & GRADIENTS --- */
+    --shadow-light-elevation: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    /* Box Shadows using Maroon Shades */
+    --box-shadow-maroon-dark: 0 4px 15px rgba(69, 17, 21, 0.7); /* Used for deep elevation */
+    --box-shadow-maroon-light: rgba(69, 17, 21, 0.2); /* Used for subtle elevation */
+    --box-shadow-maroon-light-hover: rgba(69, 17, 21, 0.4); /* Used for subtle elevation */
+    
+    /* Gradient for subtle effects (e.g., image overlay) */
+    --gradient-overlay: linear-gradient(to top, rgba(69, 17, 21, 0.8), rgba(96, 24, 30, 0)); 
+}
+
+/* ================================================= */
+/* 🌑 Dark Mode (Overrides for better viewing at night) */
+/* ================================================= */
+@media (prefers-color-scheme: dark) {
+    :root [data-theme="dark"] {
+        /* SURFACE & TEXT COLORS (INVERTED) */
+        --color-bg-main: #1a1a1a;
+        --color-text-dark: var(--color-cream); 
+        --color-grey-subtle: #333333; 
+        --color-maroon-disabled: #4c3e3f; 
+        
+        /* SHADOWS & GRADIENTS */
+        --shadow-light-elevation: 0 4px 15px rgba(0, 0, 0, 0.8); /* Stronger shadow in dark mode */
+        --box-shadow-maroon-dark: 0 4px 15px rgba(96, 24, 30, 0.9); /* Darker Maroon Shadow */
+        --box-shadow-maroon-light: 0 2px 8px rgba(96, 24, 30, 0.5); 
+    }
+}
+
+/* ===================================== */
+/* A. GLOBAL BASE STYLES & TYPOGRAPHY */
+/* ===================================== */
+
+body {
+    /* Updated to use :root variable for dark mode compatibility */
+    background-color: var(--color-bg-main); 
+    color: var(--color-text-dark); /* Global text color */
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  line-height: 15px;
+  font-size: 18px;
+  border: none;
+    background: #000;
+  outline: none;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+}
+/* Global Animation Classes for JS */
+.animate__slide_in_up, .animate__fade_in, .animate__fade_in_down {
+    opacity: 0;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+.animate__slide_in_up {
+    transform: translateY(50px);
+}
+.show-element {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/*common styling*/
+.part-heading {
+    text-align: center;
+    color: var(--color-maroon-default) !important;
+}
+.part-heading h2 {
+    font-size: 30px;
+    font-weight: var(--weight-semibold) !important;
+}
+.part-heading h4 {
+    font-size: 25px;
+    font-weight: var(--weight-semibold) !important;
+}
+.part-heading h2 span {
+    color: var(--color-maroon-default) !important;
+}
+.bg-teal-color {
+    background-color: var(--color-maroon-default) !important;
+}
+.caption {
+    font-family: var(--font-body) !important;
+    font-weight: var(--weight-medium) !important;
+}
+.bg-beige-color {
+    background-color: var(--color-cream) !important;
+}
+.text-shadow-dark {
+    text-shadow: var(--shadow-light-elevation) !important;
+}
+.text-beige-color {
+    color: var(--color-cream) !important;
+}
+a,li,ul {
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-maroon-default) !important;
+}
+p,i {
+    color: var(--color-maroon-default) !important;
+}
+p, span, input,select {
+    font-weight: var(--weight-medium) !important;
+    font-family: var(--font-body) !important;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-heading) !important;
+    font-weight: var(--weight-semibold) !important;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 35px;
+    color: var(--color-maroon-default) !important;
+}
+.text-teal-color {
+    color: var(--color-maroon-default) !important;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.btn-custom {
+    background: var(--color-maroon-default) !important;
+    border: none;
+    color: var(--color-cream) !important;
+    font-weight: var(--weight-medium) !important;
+    transition: all 0.3s ease;
+}
+.btn-custom:hover {
+    background: var(--color-maroon-hover) !important;
+    color: var(--color-cream) !important;
+    transform: translateX(4px);
+    box-shadow: var(--shadow-light-elevation) !important;
+}
+.secondary-btn {
+    color: var(--color-maroon-default) !important;
+    border: 2px solid var(--color-maroon-default) !important;
+}
+.secondary-btn:hover {
+    color: var(--color-cream) !important;
+    background-color: var(--color-maroon-hover) !important;
+    transform: translateX(4px);
+    box-shadow: var(--shadow-light-elevation) !important;
+}
+.text-btn {
+    color: var(--color-maroon-default) !important;
+}
+.text-btn:hover {
+    color: var(--color-maroon-hover) !important;
+}
+.text-btn:active {
+    color: var(--color-maroon-focus) !important;
+}
+.text-btn:focus {
+    color: var(--color-maroon-focus) !important;
+}
+.btn-custom-2 {
+    background: var(--color-cream) !important;
+    border: none;
+    color: var(--color-maroon-default) !important;
+    font-weight: var(--weight-medium) !important;
+    transition: all 0.3s ease;
+}
+.btn-custom-2:hover {
+    background: var(--color-maroon-hover) !important;
+    color: var(--color-cream) !important;
+    transform: translateX(4px);
+    box-shadow: var(--shadow-light-elevation) !important;
+}
+
+
+/*home page start*/
+
+/*logo*/
+
+.logo {
+    color: var(--color-maroon-default) !important;
+    font-family: var(--font-heading) !important;
+}
+.logo:hover {
+    color: var(--color-maroon-hover) !important;
+}
+
+/*navigation*/
+
+.navbar-brand {
+    font-weight: 700;
+}
+.navigation-link a {
+    color: var(--color-maroon-default) !important;
+    position: relative;
+    z-index: 1;
+}
+.navigation-link a:hover{
+    color: var(--color-maroon-hover) !important;
+}
+.navigation-link a:focus{
+    color: var(--color-maroon-focus) !important;
+}
+.dropdown ul li a {
+    font-family: var(--font-body) !important;
+    font-weight: var(--weight-medium) !important;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.dropdown:hover ul {
+    display: block;
+}
+.dropdown ul li {
+    margin: 0 10px;
+    border-bottom: 1px solid var(--color-grey-subtle) !important;
+}
+.dropdown ul li:last-child {
+    margin: 0 10px;
+    border-bottom: none;
+}
+.dropdown:hover ul li:hover a {
+    background: var(--color-maroon-default) !important;
+    color: var(--color-cream) !important;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    height: 40px;
+    border-radius: 30px;
+    padding-left: 35px;
+    border: none;
+    box-shadow: var(--shadow-light-elevation) !important;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--color-grey-subtle) !important;
+}
+.btn-creative {
+    border: 2px solid var(--color-maroon-default) !important;
+    border-radius: 20px;
+    font-weight: var(--weight-semibold) !important;
+    color: var(--color-maroon-default) !important;
+}
+.btn-creative:hover {
+    background-color: var(--color-maroon-default) !important;
+    color: var(--color-cream) !important;
+}
+.btn-creative:focus {
+    background-color: var(--color-maroon-focus) !important;
+    color: var(--color-cream) !important;
+}
+
+/*hero section start*/
+/* --- 1. HERO CAROUSEL --- */
+.hero-carousel {
+    /* To ensure the carousel takes full viewport height */
+    position: relative;
+    overflow: hidden;
+}
+.carousel-item-1 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 1.5s ease-in-out;
+    /* Slower transition for cinematic effect */
+}
+.carousel-item-2 {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 4.5s ease;
+}
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 0;
+    text-shadow: var(--shadow-light-elevation) !important;
+    background: rgba(69, 17, 21, 0.7); /* Deep Teal background */
+}
+/*scrolling-marquee*/
+
+.scrolling-strip {
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+/* --- 2. INFINITE CAROUSEL STRIP --- */
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scrolls 50% for seamless loop */
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-right: 20px;
+    animation: scrollText 10s linear infinite; /* KEY: Slow, continuous scroll */
+    letter-spacing: 0.2em;
+}
+
+/*detail-section*/
+
+.value-item i {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+
+/* --- FOOTER SPECIFICS --- */
+.feature-item i {
+    transition: color 0.3s;
+}
+.footer-logo {
+    width: 40px; 
+    height: auto;
+}
+footer > h5 {
+    font-size: 20px;
+}
+footer a {
+    display: block;
+    font-family: var(--font-body) !important;
+    color: var(--color-cream) !important;
+    font-size: 15px;
+    margin: 10px 0;
+    font-weight: var(--weight-light) !important;
+}
+footer a:hover {
+    font-weight: var(--weight-semibold) !important;
+}
+
+/*modal section*/
+
+.modal-body input {
+    width: 300px;
+    padding: 6px 10px;
+}
+.subs-btn {
+    font-weight: var(--weight-medium) !important;
+    font-family: var(--font-body) !important;
+    width: 300px;
+}
+/* --- ABOUT US: section --- */
+
+.about-text-block {
+    /* Ensures text block has consistent padding and remains dark */
+    min-height: 550px; /* Matching the height of the image block */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-image-block {
+    /* For the high-impact visual side */
+    position: relative;
+    /* Optional: If you want the image to slightly overlap/break out */
+    /* padding-left: 0; */
+}
+
+.about-visual-card {
+    /* Main visual styling for the image block */
+    height: 550px; /* Fixed height for architectural feel */
+    background-size: cover;
+    background-position: center 20%; /* Focus on model/texture */
+    border-radius: 8px; /* Subtle rounded edges like the reference image */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 40px var(--shadow-light-elevation) !important; /* Strong shadow for depth */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--gradient-overlay) !important;
+}
+
+/* Hover Zoom effect is assumed from previous designs */
+/* .hover-zoom:hover .about-visual-card { transform: scale(1.05); } */
+
+
+/* . OUR CATEGORIES: VISUAL CARDS --- */
+.category-card {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.category-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(69, 17, 21, 0.3); /* Teal Overlay */
+    transition: background-color 0.3s;
+}
+.category-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.1); /* Darker on hover */
+}
+.category-link {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: var(--font-body) !important;
+    font-weight: var(--weight-bold) !important;
+    color: var(--color-cream) !important;
+    font-size: 1.25rem;
+    text-decoration: none;
+    z-index: 10;
+    transition: letter-spacing 0.3s;
+}
+.category-card:hover .category-link {
+    letter-spacing: 0.1em;
+}
+
+
+
+/* --- TIMELESS ESSENTIALS (ASSEMBLAGE) --- */
+.product-grid-large {
+    height: 700px; /* Fixed height for the grid */
+}
+.product-card-large {
+    height: 103.5%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: var(--shadow-light-elevation) !important;
+}
+.product-card-large::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--box-shadow-maroon-light) !important; /* Dark overlay */
+    transition: background-color 0.5s;
+}
+.product-card-large:hover::before {
+    background-color: var(--box-shadow-maroon-light-hover) !important; /* Darker on hover */
+}
+.card-content {
+    position: relative;
+    z-index: 10;
+    color: white;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.product-card-large:hover .card-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ---. NEW ARRIVALS (CARD STYLING) --- */
+.product-card-light {
+    background-color: white;
+    border: 1px solid var(--color-cream) !important;
+}
+.product-card-light:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.arrival-btn:hover {
+    color: var(--color-maroon-default) !important;
+}
+
+/* --. FAQ STYLING --- */
+.faq-item {
+    border-top: 1px solid var(--color-maroon-hover) !important;
+    border-bottom: 1px solid var(--color-maroon-hover) !important;
+    margin-bottom: -1px; /* Overlap border for clean look */
+}
+.accordion-button:not(.collapsed) {
+    color: var(--color-maroon-default) !important;
+    background-color: var(--color-cream) !important;
+    box-shadow: none;
+}
+.accordion-button:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+
+/* --. TESTIMONIALS --- */
+
+.testimonial-card i.bi-quote {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 4rem; /* Larger quote icon */
+    color: var(--color-maroon-hover) !important;
+}
+.carousel-indicators-bottom button {
+    opacity: 0.6;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+.carousel-indicators-bottom button.active {
+    background-color: var(--color-maroon-default) !important;
+    opacity: 1;
+}
+/* --- TESTIMONIALS REFINEMENT --- */
+
+.testimonial-card {
+    /* Larger box, more padding */
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid rgba(69, 17, 21, 0.2);
+    box-shadow: var(--shadow-light-elevation) !important; /* Elevated look */
+    min-height: 300px; /* Ensure consistent height across slides */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAROUSEL INDICATORS: Positioned above the content */
+#testimonialCarousel .carousel-indicators-bottom {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+/*Home page end*/
+
+
+
+
+
+
+
+
+
+
+
+/* --- ABOUT US PAGE START --- */
+/* --- ABOUT PAGE SPECIFIC STYLES --- */
+.hero-section {
+    height: 60vh; /* Reduced height for a sophisticated banner */
+    background-size: cover;
+    background-position: center 30%; /* Focus on the upper part of the image */
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+    justify-content: center;
+    text-align: center; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.hero-section::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--color-maroon-default) !important;
+    opacity: 0.6;
+}
+.story-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.value-card {
+    padding: 30px;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.value-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-maroon-default) !important;
+}
+
+/*ABOUT_US PAGE END*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Product page start*/
+#mycardtitle{
+    font-size:15px;
+}
+#mycardtext{
+    font-size:12px;
+}
+
+.product-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.product-image-1 {
+    transition: all 0.5s ease;
+    height: 250px;
+    padding: 20px 20px 0 20px;
+    object-fit: cover;
+}
+.badge-custom {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1;
+}
+
+/* --- SHOP FILTER SPECIFIC STYLES --- */
+
+/* Filter Links (Category) */
+.category-list .filter-link {
+    display: block;
+    padding: 5px 0;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.category-list .filter-link:hover, .category-list .filter-link.active {
+    color: var(--color-maroon-default);
+    font-weight: 600;
+}
+
+/* Accordion Styling (Filter Cards) */
+.accordion-item-custom {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.accordion-button-custom {
+    padding: 15px 0;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 1rem;
+    color: var(--color-maroon-default) !important;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--color-maroon-hover) !important;
+    border-bottom: 1px solid var(--color-maroon-default) !important;
+}
+.accordion-body-custom {
+    padding: 15px 0 20px 0;
+}
+
+/* Color Swatch Styling */
+.color-swatch-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.color-swatch {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0 2px transparent;
+    transition: all 0.2s;
+}
+.color-swatch-wrapper:hover .color-swatch, .color-swatch.active {
+    box-shadow: 0 0 0 2px var(--color-maroon-default); /* Selected color par border */
+    transform: scale(1.1);
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+.range {
+    color: var(--color-maroon-default) !important;
+    width: 200px;
+}
+
+.product-card-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.thumbnail:hover, .thumbnail.active {
+    opacity: 1;
+}
+/* --- PDP SPECIFIC STYLES --- */
+.main-image-wrapper { /* <-- Naya container/box */
+    /* 4:3 Aspect Ratio (4 units wide : 3 units high) */
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 3 / 4 = 0.75 or 75% */
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden; /* Image ke bahar ka hissa hide ho jaayega */
+    transition: transform 0.8s ease-out;
+}
+.main-image-wrapper:hover { 
+    transform: scale(1.005); /* Hover effect ab wrapper par */
+}
+
+.main-image {
+    position: absolute; /* Wrapper ke andar puri tarah fit */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Box ko hamesha puri tarah cover karegi */
+    transition: none; /* Image par ab koi alag transition nahi */
+}
+/* Purani .main-image ki height: 650px; property ab hat gayi hai */
+
+.thumbnail {
+    /* Thumbnail styles are good as they were */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.8;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+/*product detail page end*/
+
+
+
+
+
+
+
+
+
+/*linen care guide page start*/
+
+/* --- Section Styling (Right Content) --- */
+.hero-care-banner {
+    background-attachment: fixed; /* KEY FOR PARALLAX EFFECT */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -1;
+}
+.hero-care-banner::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--color-maroon-default) !important;
+    opacity: 0.6;
+}
+
+/* Scroll Prompt Animation */
+.scroll-prompt {
+    display: block;
+    opacity: 0.8;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+.care-section {
+    /* Full viewport section scroll */
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+/* --- Micro-Animations and Hover Effects --- */
+
+/* Image Hover Scale */
+.hover-scale-img {
+    transition: transform 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.hover-scale-img:hover {
+    transform: scale(1.02);
+}
+
+/* Card Hover Up Effect */
+.hover-up {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.hover-up:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Checklist Styling */
+.checklist-teal li {
+    font-size: 1rem;
+    padding: 5px 0 5px 30px;
+    position: relative;
+    border-bottom: 1px dotted rgba(69, 17, 21, 0.2);
+}
+.checklist-teal i {
+    color: var(--color-maroon-default) !important;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*linen care guide page end*/
+
+
+
+
+
+
+
+
+
+
+
+/*contact-us page start*/
+
+.hover-scale { transition: transform 0.2s; }
+.hover-scale:hover { transform: scale(1.05); }
+
+/* ---. CONTACT PAGE SPECIFIC STYLES --- */
+
+.contact-info-card {
+    background-color: var(--color-maroon-default) !important;
+    color: #f5f4dc;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.contact-info-card h4 {
+    color: var(--color-cream) !important;
+    border-bottom: 1px solid rgba(245, 244, 220, 0.2);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.contact-info-card a {
+    color: var(--color-cream) !important;
+}
+.contact-info-card p {
+    color: var(--color-cream) !important;
+}
+.contact-info-card i {
+    color: var(--color-cream) !important;
+}
+.contact-form-block .form-label {
+    font-weight: 600;
+    color: var(--color-maroon-default) !important;
+}
+.contact-form-block .form-control {
+    border-color: var(--color-maroon-default) !important;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contact-form-block .form-control:focus {
+    border-color: var(--color-maroon-default) !important;
+    box-shadow: 0 0 0 0.25rem rgba(245, 244, 220, 0.2); /* Teal focus ring */
+}
+.social-icons a {
+    color: var(--color-cream) !important;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s, transform 0.2s; /* Added transform for hover */
+}
+.social-icons a:hover {
+    color: var(--color-maroon-default) !important;
+    transform: scale(1.1); /* Interactive hover */
+}
+/*contact--us end*/
+
+
+
+
+
+
+
+
+
+
+
+/*login page start*/
+.login-pane-left {
+    width: 45%; /* Slightly less than half for emphasis on form */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Custom Form Fields (Minimalist, only bottom border) */
+.form-control-custom {
+    border: none;
+    border-bottom: 2px solid var(--color-maroon-hover) !important;
+    border-radius: 0;
+    padding: 10px 0;
+    transition: border-bottom-color 0.3s;
+}
+.form-control-custom:focus {
+    box-shadow: none;
+    border-bottom-color: var(--color-maroon-default) !important;
+    background-color: transparent;
+}
+
+/* Image Pane Text Shadow */
+
+/* --- Subtle Initial Animations --- */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate__fade_in_right {
+    animation: fadeInRight 1s ease-out forwards;
+}
+.animate__fade_in_left {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+/*login page end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*wishlist page start*/
+
+/* --- WISHLIST TABLE STYLES --- */
+.wishlist-table th {
+    background-color: var(--color-maroon-default) !important; /* Header background color */
+    color: var(--color-cream) !important; 
+    font-weight: 700;
+    font-family: var(--font-body) !important;
+    padding: 15px 10px;
+    border: none;
+    vertical-align: middle;
+}
+.wishlist-table td {
+    vertical-align: middle;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-cream) !important;;
+}
+.wishlist-img-small {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+.wishlist-input {
+    width: 350px;
+}
+.btn-link-teal {
+    color: var(--color-maroon-default) !important;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.item-remove {
+    cursor: pointer;
+    color: #888;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+    padding-right: 15px;
+}
+.it.item-remove:hover {
+    coloo: var(--color-maroon-default) !important;
+}
+/* --- TRUST BADGES SECTION --- */
+.trust-badge-icon {
+    font-size: 3rem;
+    color: var(--color-maroon-default) !important;
+    margin-bottom: 10px;
+}
+
+/*wishlist page end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- WISHLIST TABLE STYLES --- */
+/* ... (existing styles) ... */
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 768px) {
+    /* Table Rows ko block element banao, taaki woh ek-ek karke stack ho sakein */
+    .wishlist-table thead, 
+    .wishlist-table tbody, 
+    .wishlist-table th, 
+    .wishlist-table td, 
+    .wishlist-table tr {
+        display: block;
+    }
+    
+    /* Table Header ko chhipa do, kyunki data stack ho raha hai */
+    .wishlist-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    /* Har row ab ek card jaisi dikhegi */
+    .wishlist-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Har Cell (TD) ko naya style do */
+    .wishlist-table td {
+        border: none; /* Har cell se border hatao */
+        position: relative;
+        padding-left: 50%; /* Left mein jagah banao label ke liye */
+        text-align: right;
+    }
+
+    /* Har Cell ke Left mein uska Label (Header) daalo (Pseudo-element se) */
+    .wishlist-table td:before {
+        content: attr(data-label); /* data-label attribute se content uthaao */
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 700;
+        color: var(--color-maroon-default) !important;
+        font-size: 0.9rem;
+    }
+    
+    /* Remove (X) button ko left mein set karo */
+    .wishlist-table td:nth-child(1) {
+        text-align: left;
+        padding-left: 10px;
+    }
+    /* Product details ko alag tarah se align karo */
+    .wishlist-table td:nth-child(2) {
+        text-align: left;
+        padding-left: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    .wishlist-table td:nth-child(2):before {
+        content: 'Product';
+    }
+    /* Action button ko poora width do */
+    .wishlist-table td:nth-child(6) {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*media query start*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    .logo {
+        font-size: 13px;
+    }
+    .nav-custom ul li a {
+        font-size: 13px;
+    }
+    nav form {
+    margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 992px) {
+    nav form {
+    margin-bottom: 1rem;
+    }
+    nav .btn-creative {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+    .product-card-btn {
+        display: block;    
+    }
+}
+
+
+
+
+/*media query end*/

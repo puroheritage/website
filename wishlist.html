@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puro Heritage</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="assets/bootstrap-5/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="assets/bootstrap-5/js/bootstrap.js"></script>
+</head>
+
+<body>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="">
+        <i class="fa-solid fa-arrow-up text-white"></i>
+    </button>
+    
+    <header class="position-sticky top-0 z-2">
+    
+    <section class="py-2 bg-teal-color text-beige-color d-none d-md-block">
+    <div class="container">
+        <div class="row small px-5 justify-content-between">
+        <div class="col-md-6">
+            <a href="tel :123 456 8900" class="text-beige-color">
+                <i class="bi bi-telephone-fill me-2 text-beige-color"></i>
+            Call Us: 123 456 8900</a>
+            <span class="ms-4">|</span>
+            <i class="bi bi-geo-alt-fill me-2 ms-4 text-beige-color"></i>
+            Location: New Delhi, India
+        </div>
+        <div class="social-login col-md-6 text-right text-beige-color">
+            <span class="me-3">Sign up and GET 25% OFF on your first order.</span>
+            <a href="login.html" class="text-beige-color text-decoration-none fw-bold me-3 hover-text-teal">Sign Up Now</a>
+            <a href="#">
+                <i class="bi bi-facebook mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-twitter mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-instagram mx-1 text-beige-color"></i>
+            </a>
+        </div>
+            </div>
+    </div>
+</section>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand text-uppercase logo" href="#">
+                <img src="assets/images/logo-2.png" alt="" width="40px" class="img-fluid"/>
+                Puro Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-custom" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item navigation-link">
+                        <a href="index.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>Home</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item navigation-link">
+                        <a href="about-us.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>About Us</strong>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="products.html" class="nav-link text-uppercase rounded-5 mx-2"> <strong>Shop</strong> </a> </li>
+                    
+                    <li class="nav-item navigation-link dropdown"> <a href="#" class="nav-link text-uppercase dropdown-toggle rounded-5 mx-2" id="navbardropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <strong>Apparel</strong> </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li> <a href="products.html" class="dropdown-item">Men</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Women</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Co-ords</a> </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="contact-us.html" class=" nav-link text-uppercase rounded-5 mx-2"> <strong>contact</strong> </a> </li>
+                </ul>
+                <form class="d-flex">
+        <div class="search-container">
+        <input type="text" class="form-control search-input" placeholder="Search...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      </form>
+                <div class="d-flex"> <a href="wishlist.html" class="text-decoration-none text-teal-color ms-3 me-3"><i class="fa-regular fa-heart"></i></a> <a href="checkout.html" class="text-decoration-none text-teal-color"><i class="fa-solid fa-cart-shopping"></i></a> </div>
+            <a href="login.html" class="btn btn-creative px-4 ms-4">Login</a>
+            </div>
+            
+        </div>
+    </nav>
+    
+</header>
+    
+    <main>
+        <section class="container my-5 part-heading">
+            <h2 class="animate__slide_in_up">My Wishlists</h2>
+            <div class="table-responsive-lg my-5 shadow-lg rounded-3 overflow-hidden animate__slide_in_up">
+                <table class="table table-hover wishlist-table bg-white mb-0 text-left">
+                    <thead>
+                        <tr class="text-uppercase">
+                            <th scope="col" style="width: 5%;"></th>
+                            <th scope="col" style="width: 40%;">product</th>
+                            <th scope="col" style="width: 15%;">price</th>
+                            <th scope="col" style="width: 15%;">date added</th>
+                            <th scope="col" style="width: 15%;">stock status</th>
+                            <th scope="col" style="width: 10%;">actions</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td data-label="Remove" class="text-center"><span class="item-remove" onclick="removeItem(this)">&times;</span></td>
+                            <td data-label="Product">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/Ivory-Classic-Shirt.jpg" alt="Heritage Trousers" class="img-fluid wishlist-img-small" width="80" height="80">
+                                    <div class="text-left">
+                                        <a href="#" class="fw-bold">Ivory Classic Shirt</a>
+                                        <p class="small text-muted m-0">White Linen, Size M</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Price">₹ 6,499</td>
+                            <td data-label="Added On" class="small text-muted">20 October 2025</td>
+                            <td data-label="Status" class="text-capitalize text-success fw-bold">in stock</td>
+                            <td data-label="Actions"><a href="checkout.html" class="btn btn-sm btn-custom rounded-pill px-3">Add to cart</a></td>
+                        </tr>
+                        
+                        <tr>
+                            <td data-label="Remove" class="text-center"><span class="item-remove" onclick="removeItem(this)">&times;</span></td>
+                            <td data-label="Product">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/Stone-Tailored-Trousers.jpeg" alt="Heritage Trousers" class="img-fluid wishlist-img-small" width="80" height="80">
+                                    <div class="text-left">
+                                        <a href="#" class="fw-bold">Stone Tailored Trousers</a>
+                                        <p class="small text-muted m-0">Mid-weight linen, Size L</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Price">₹ 7,500</td>
+                            <td data-label="Added On" class="small text-muted">27 October 2025</td>
+                            <td data-label="Status" class="text-danger fw-bold">Out of stock</td>
+                            <td data-label="Actions"><button href="#" class="btn btn-sm rounded-pill btn-outline-dark" disabled>Notify me</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td data-label="Remove" class="text-center"><span class="item-remove" onclick="removeItem(this)">&times;</span></td>
+                            <td data-label="Product">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/Teal-Button-Down-Shirt.jpeg" alt="Heritage Trousers" class="img-fluid wishlist-img-small" width="80" height="80">
+                                    <div class="text-left">
+                                        <a href="#" class="fw-bold">Teal Button Down Shirt</a>
+                                        <p class="small text-muted m-0">Signature Deep Teal, Size S</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Price">₹ 16,999</td>
+                            <td data-label="Added On" class="small text-muted">16 October 2025</td>
+                            <td data-label="Status" class="text-capitalize text-success fw-bold">in stock</td>
+                            <td data-label="Actions"><a href="checkout.html" class="btn btn-sm btn-custom rounded-pill px-3">Add to cart</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap animate__slide_in_up">
+                <div class="d-flex align-items-center mb-3 mb-md-0">
+                    <span class="fw-bold me-2 text-teal-color">Share Wishlist Link:</span>
+                    <div class="wishlist-input input-group">
+                        <input type="text" class="form-control form-control-sm font-lato" value="https://puroheritage.com/wishlist/share-link-12345" id="wishlistLink" readonly>
+                        <button class="btn btn-outline-dark btn-sm" type="button" onclick="copyLink()">Copy Link</button>
+                    </div>
+                </div>
+                
+                <div>
+                    <a href="#" class="btn btn-link-teal me-3 fw-bold" onClick="clearWishlist()">Clear Wishlist</a>
+                    <a href="checkout.html" class="btn btn-custom me-3 fw-bold px-4 rounded-pill" onClick="addAllToCart()">Add All to Cart</a>
+                </div>
+            </div>  
+            
+            <div class="row text-center border-top border-bottom py-5 my-4 animate__slide_in_up">
+                
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <i class="fa-solid fa-truck-fast trust-badge-icon"></i>
+                    <h5 class="fw-bold font-lato text-teal-color">Free Shipping</h5>
+                    <p class="small text-muted mb-0">Free Express Shipping on orders above ₹ 10,000.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <i class="fa-regular fa-credit-card trust-badge-icon"></i>
+                    <h5 class="fw-bold font-lato text-teal-color">Flexible Payment</h5>
+                    <p class="small text-muted mb-0">Multiple secure payment options including COD.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-headset trust-badge-icon"></i>
+                    <h5 class="fw-bold font-lato text-teal-color">24×7 Support</h5>
+                    <p class="small text-muted mb-0">We support our clients online all days of the week.</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-teal-color text-beige-color pb-3 pt-5">
+    <section class="container px-5">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo-3.png" alt="Puro Heritage Logo" class="footer-logo me-3">
+                    <h5 class="fw-bold mb-0">PURO HERITAGE</h5>
+                </div>
+                <p class="small opacity-75 pe-4 text-beige-color">
+                    The finest European Flax woven into apparel that defines timelessness and enduring quality.
+                </p>
+                <div class="footer-social-icons fs-5 mt-3">
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-facebook text-beige-color"></i>
+                    </a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-twitter text-beige-color"></i>
+                    </a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-instagram text-beige-color"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="fw-bold mb-3">Customer Services</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">My Account</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Track Your Order</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Returns</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Our Information</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li>
+                        <a href="about-us.html" class="text-beige-color text-decoration-none hover-text-teal-light">About us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                        <a href="care-guide.html" class="text-beige-color text-decoration-none hover-text-teal-light">Linen Care Guide</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Contact Info</h5>
+                <p class="small opacity-75 mb-1 text-beige-color">
+                    <a href="tel :123 456 7890">
+                        <i class="bi bi-telephone-fill me-2 text-beige-color"></i>
+                        +91-98765-43210
+                    </a>
+                </p>
+                <p class="font-lato small opacity-75 mb-1 text-beige-color">
+                    <a href="mailto :support@puroheritage.com">
+                        <i class="bi bi-envelope-fill me-2 text-beige-color"></i>
+                        support@puroheritage.com
+                    </a>
+                </p>    
+                <p class="font-lato small opacity-75 mt-3 text-beige-color">
+                    The Heritage Workshop,<br>
+                    14, Linen Quarter, <br>
+                    New Delhi, India
+                </p>
+            </div>
+        </div>
+ 
+    
+
+    <div class="copyright-bar py-3 mt-4 border-top border-teal-light">
+        <div class="container d-flex justify-content-between align-items-center small font-lato px-5">
+            <small>Copyright © 2025 PURO HERITAGE. All Rights Reserved.</small>
+            <div class="d-flex align-items-center">
+                <span class="me-3">English | ₹ INR</span>
+            </div>
+        </div>
+           </div>
+    </section>
+</footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- Scroll Animation Observer ---
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                
+                // Add show-element class to trigger CSS transition
+                element.classList.add('show-element');
+                observer.unobserve(element);
+            }
+        });
+    }, {
+        threshold: 0.1 
+    });
+
+    // Observe all scroll-animated sections
+    document.querySelectorAll('.animate__slide_in_up, .animate__fade_in, .animate__fade_in_down').forEach(element => {
+        // Set initial state for slide-up animation
+        if (element.classList.contains('animate__slide_in_up')) {
+            element.style.transform = 'translateY(50px)';
+        }
+        element.style.opacity = '0'; 
+        observer.observe(element);
+    });
+});
+    </script>
+    
+    <script>
+    // Placeholder functions for interactivity
+    function removeItem(element) {
+        if(confirm("Are you sure you want to remove this item?")) {
+            element.closest('tr').remove();
+        }
+    }
+    
+    function copyLink() {
+        const link = document.getElementById('wishlistLink');
+        link.select();
+        link.setSelectionRange(0, 99999); // For mobile devices
+        document.execCommand("copy");
+        alert("Wishlist link copied to clipboard!");
+    }
+    
+    function clearWishlist() {
+        if(confirm("Are you sure you want to clear your entire wishlist?")) {
+            const tableBody = document.querySelector('.wishlist-table tbody');
+            tableBody.innerHTML = ''; // Clears all rows
+        }
+    }
+
+    function addAllToCart() {
+        alert("All available items added to your shopping cart!");
+        // Add actual logic here to move items to cart
+    }
+</script>
+    
+    <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+    
+</body>
+</html>

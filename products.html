@@ -1,0 +1,569 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puro Heritage</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="assets/bootstrap-5/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="assets/bootstrap-5/js/bootstrap.js"></script>
+</head>
+
+    <body>
+    
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="">
+        <i class="fa-solid fa-arrow-up text-white"></i>
+    </button>
+        
+        <header class="position-sticky top-0 z-2">
+    
+    <section class="py-2 bg-teal-color text-beige-color d-none d-md-block">
+    <div class="container">
+        <div class="row small px-5 justify-content-between">
+        <div class="col-md-6">
+            <a href="tel :123 456 8900" class="text-beige-color">
+                <i class="bi bi-telephone-fill me-2 text-beige-color"></i>
+            Call Us: 123 456 8900</a>
+            <span class="ms-4">|</span>
+            <i class="bi bi-geo-alt-fill me-2 ms-4 text-beige-color"></i>
+            Location: New Delhi, India
+        </div>
+        <div class="social-login col-md-6 text-right text-beige-color">
+            <span class="me-3">Sign up and GET 25% OFF on your first order.</span>
+            <a href="login.html" class="text-beige-color text-decoration-none fw-bold me-3 hover-text-teal">Sign Up Now</a>
+            <a href="#">
+                <i class="bi bi-facebook mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-twitter mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-instagram mx-1 text-beige-color"></i>
+            </a>
+        </div>
+            </div>
+    </div>
+</section>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand text-uppercase logo" href="#">
+                <img src="assets/images/logo-2.png" alt="" width="40px" class="img-fluid"/>
+                Puro Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-custom" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item navigation-link">
+                        <a href="index.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>Home</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item navigation-link">
+                        <a href="about-us.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>About Us</strong>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="products.html" class="nav-link text-uppercase rounded-5 mx-2"> <strong>Shop</strong> </a> </li>
+                    
+                    <li class="nav-item navigation-link dropdown"> <a href="#" class="nav-link text-uppercase dropdown-toggle rounded-5 mx-2" id="navbardropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <strong>Apparel</strong> </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li> <a href="products.html" class="dropdown-item">Men</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Women</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Co-ords</a> </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="contact-us.html" class=" nav-link text-uppercase rounded-5 mx-2"> <strong>contact</strong> </a> </li>
+                </ul>
+                <form class="d-flex">
+        <div class="search-container">
+        <input type="text" class="form-control search-input" placeholder="Search...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      </form>
+                <div class="d-flex"> <a href="wishlist.html" class="text-decoration-none text-teal-color ms-3 me-3"><i class="fa-regular fa-heart"></i></a> <a href="checkout.html" class="text-decoration-none text-teal-color"><i class="fa-solid fa-cart-shopping"></i></a> </div>
+            <a href="login.html" class="btn btn-creative px-4 ms-4">Login</a>
+            </div>
+            
+        </div>
+    </nav>
+    
+</header>  
+        
+        <section class="container mt-5 animate__fade_in">
+            <div class="row">
+                <div class="col-lg-9 col-md-12 col-sm-12 order-2 mt-5">
+                    <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom animate__fade_in">
+                        <p class="small text-muted mb-0">Showing 1–12 of 42 curated pieces</p>
+                        <div class="d-flex align-items-center">
+                            <span class="font-lato small text-muted me-2">Sort By:</span>
+                            <select class="form-select form-select-sm font-lato" style="width: 170px;">
+                                <option selected>Best Sellers</option>
+                                <option value="1">New Arrivals</option>
+                                <option value="2">Price: Low to High</option>
+                                <option value="3">Price: High to Low</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <div class="col-lg-4 mt-4 col-md-6 col-sm-12 animate__slide_in_up">
+                            <div class="card product-card border-0 rounded-4 shadow-sm product-card-custom">
+                                <div class="position-relative">
+                                    <span class="badge bg-teal-color badge-custom">New Arrival</span>
+                                    <div class="overflow-hidden">
+                                        <a href="selection.html">
+                                            <img src="assets/images/Ivory-Classic-Shirt.jpg" class="card-img-top product-image-1" alt="Product Image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="card-title text-teal-color" id="mycardtitle">Ivory Classic Shirt</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">(4.5/5)</small>
+                                    </div>
+                                    <p class="card-text text-muted mb-4" id="mycardtext">Crisp European Flax linen. Timeless standard fit. Designed to age gracefully</p>
+                                    <div class="product-card-btn">
+                                        <span class="price text-teal-color">₹ 6,299</span>
+                                        <a href="checkout.html" target="_blank" class="btn btn-custom px-4 py-2 rounded-pill"> Add to Cart </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mt-4 col-md-6 col-sm-12 animate__slide_in_up">
+                            <div class="card product-card border-0 rounded-4 shadow-sm product-card-custom">
+                                <div class="position-relative">
+                                    <span class="badge bg-teal-color badge-custom">New Arrival</span>
+                                    <div class="overflow-hidden">
+                                        <a href="selection.html">
+                                            <img src="assets/images/Stone-Tailored-Trousers.jpeg" class="card-img-top product-image-1" alt="Product Image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bold text-teal-color" id="mycardtitle">Stone Tailored Trousers</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">(4.5/5)</small>
+                                    </div>
+                                    <p class="card-text text-muted mb-4" id="mycardtext">Mid-weight linen, impeccable tailored fit. Perfect drape for all-day comfort.</p>
+                                    <div class="product-card-btn">
+                                        <span class="price text-teal-color">₹ 7,499</span>
+                                        <a href="checkout.html" target="_blank" class="btn btn-custom px-4 py-2 rounded-pill"> Add to Cart </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mt-4 col-md-6 col-sm-12 animate__slide_in_up">
+                            <div class="card product-card border-0 rounded-4 shadow-sm product-card-custom">
+                                <div class="position-relative">
+                                    <span class="badge bg-teal-color badge-custom">New Arrival</span>
+                                    <div class="overflow-hidden">
+                                        <a href="selection.html">
+                                            <img src="assets/images/Teal-Button-Down-Shirt.jpeg" class="card-img-top product-image-1" alt="Product Image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bold text-teal-color" id="mycardtitle">Teal Button Down Shirt</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">(4.5/5)</small>
+                                    </div>
+                                    <p class="card-text text-muted mb-4" id="mycardtext">Signature Deep Teal colour. Relaxed silhouette, versatile for smart-casual wear.</p>
+                                    <div class="product-card-btn">
+                                        <span class="price text-teal-color">₹ 5,999</span>
+                                        <a href="checkout.html" target="_blank" class="btn btn-custom px-4 py-2 rounded-pill"> Add to Cart </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mt-4 col-md-6 col-sm-12 animate__slide_in_up">
+                            <div class="card product-card border-0 rounded-4 shadow-sm product-card-custom">
+                                <div class="position-relative">
+                                    <span class="badge bg-teal-color badge-custom">New Arrival</span>
+                                    <div class="overflow-hidden">
+                                        <a href="selection.html">
+                                            <img src="assets/images/Deep-Brown-Cuban-Collar.jpeg" class="card-img-top product-image-1" alt="Product Image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bold text-teal-color" id="mycardtitle">Deep Brown Cuban Collar</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">(4.5/5)</small>
+                                    </div>
+                                    <p class="card-text text-muted mb-4" id="mycardtext">Relaxed fit shirt with an open Cuban collar. Ideal for effortless summer sophistication.</p>
+                                    <div class="product-card-btn">
+                                        <span class="price text-teal-color">₹ 5,799</span>
+                                        <a href="checkout.html" target="_blank" class="btn btn-custom px-4 py-2 rounded-pill"> Add to Cart </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mt-4 col-md-6 col-sm-12 animate__slide_in_up">
+                            <div class="card product-card border-0 rounded-4 shadow-sm product-card-custom">
+                                <div class="position-relative">
+                                    <span class="badge bg-teal-color badge-custom">New Arrival</span>
+                                    <div class="overflow-hidden">
+                                        <a href="selection.html">
+                                            <img src="assets/images/Handloom-Stripe-Shirt.jpeg" class="card-img-top product-image-1" alt="Product Image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bold text-teal-color" id="mycardtitle">Handloom Stripe Shirt</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">(4.5/5)</small>
+                                    </div>
+                                    <p class="card-text text-muted mb-4" id="mycardtext">Yarn-dyed stripe pattern. Crafted on a traditional loom for a unique heritage texture.</p>
+                                    <div class="product-card-btn">
+                                        <span class="price text-teal-color">₹ 6,599</span>
+                                        <a href="checkout.html" target="_blank" class="btn btn-custom px-4 py-2 rounded-pill"> Add to Cart </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 mt-4 col-md-6 col-sm-12 animate__slide_in_up">
+                            <div class="card product-card border-0 rounded-4 shadow-sm product-card-custom">
+                                <div class="position-relative">
+                                    <span class="badge bg-teal-color badge-custom">New Arrival</span>
+                                    <div class="overflow-hidden">
+                                        <a href="selection.html">
+                                            <img src="assets/images/Navy-Linen-Shorts.jpeg" class="card-img-top product-image-1" alt="Product Image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bold text-teal-color" id="mycardtitle">Navy Linen Shorts</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">(4.5/5)</small>
+                                    </div>
+                                    <p class="card-text text-muted mb-4" id="mycardtext">Lightweight and breathable. Perfect for warm weather. Minimalist, clean design.</p>
+                                    <div class="product-card-btn">
+                                        <span class="price text-teal-color">₹ 4,899</span>
+                                        <a href="checkout.html" target="_blank" class="btn btn-custom px-4 py-2 rounded-pill"> Add to Cart </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <nav aria-label="Page navigation" class="mt-5 pt-3 border-top animate__fade_in">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link text-teal-color" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link bg-teal-color text-beige-color" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link text-teal-color" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link text-teal-color" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link text-teal-color" href="#">Next</a></li>
+                        </ul>
+                    </nav>     
+                </div>
+                
+                <div class="col-lg-3">
+                    <h2 class="text-teal-color fw-bold mb-4 border-bottom pb-2">Filter Products</h2>
+
+                    <div class="filter-group mb-4">
+                        <h5 class="filter-heading text-teal-color fw-bold mb-3">CATEGORY</h5>
+                        <div class="category-list small">
+                            <a href="#" class="filter-link active">Men (12)</a>
+                            <a href="#" class="filter-link">Women (30)</a>
+                            <a href="#" class="filter-link">Co-Ords (8)</a>
+                            <a href="#" class="filter-link">Trousers (5)</a>
+                            <a href="#" class="filter-link">Accessories (2)</a>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush" id="filterAccordion">
+                        
+                        <div class="accordion-item accordion-item-custom filter-card">
+                            <h2 class="accordion-header" id="priceHeading">
+                                <button class="accordion-button accordion-button-custom collapsed font-lato fw-bold text-teal-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice" aria-expanded="false" aria-controls="collapsePrice">
+                                    PRICE RANGE
+                                </button>
+                            </h2>
+                            <div id="collapsePrice" class="accordion-collapse collapse" aria-labelledby="priceHeading" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body accordion-body-custom">
+                                    <div class="price-slider-container">
+                                        <input type="range" id="rng_inp" name="rng"  min="0" max="25000" value="2000" step="100" class="mt-5 mb-4 range">
+                                        <div class="d-flex justify-content-between small mt-2 text-muted">
+                                            <span id="rng">₹ 2,000</span>
+                                            <span id="priceValue">₹ 25,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="1000-5000" id="range1">
+                                            <label class="form-check-label small" for="range1">₹ 1,000 - ₹ 5,000</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="5000-10000" id="range2">
+                                            <label class="form-check-label small" for="range2">₹ 5,000 - ₹ 10,000</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item accordion-item-custom filter-card">
+                            <h2 class="accordion-header" id="colorHeading">
+                                <button class="accordion-button accordion-button-custom collapsed font-lato fw-bold text-teal-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseColor" aria-expanded="false" aria-controls="collapseColor">
+                                    COLOR
+                                </button>
+                            </h2>
+                            <div id="collapseColor" class="accordion-collapse collapse show" aria-labelledby="colorHeading" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body accordion-body-custom d-flex flex-wrap">
+                                    <div class="color-swatch-wrapper" title="Cloud White"><div class="color-swatch active" style="background-color: #f5f4dc; border: 2px solid var(--teal-dark);"></div><span class="small">White</span></div>
+                                    <div class="color-swatch-wrapper" title="Deep Teal"><div class="color-swatch" style="background-color: #304f4f;"></div><span class="small">Teal</span></div>
+                                    <div class="color-swatch-wrapper" title="Clay Brown"><div class="color-swatch" style="background-color: #A0522D;"></div><span class="small">Brown</span></div>
+                                    <div class="color-swatch-wrapper" title="Sky Blue"><div class="color-swatch" style="background-color: #87CEEB;"></div><span class="small">Blue</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item accordion-item-custom filter-card">
+                            <h2 class="accordion-header" id="fabricHeading">
+                                <button class="accordion-button accordion-button-custom collapsed font-lato fw-bold text-teal-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFabric" aria-expanded="false" aria-controls="collapseFabric">
+                                    FABRIC TYPE
+                                </button>
+                            </h2>
+                            <div id="collapseFabric" class="accordion-collapse collapse" aria-labelledby="fabricHeading" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body accordion-body-custom">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="european-flax" id="fab1">
+                                        <label class="form-check-label small" for="fab1">European Flax Linen</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="organic-cotton" id="fab2">
+                                        <label class="form-check-label small" for="fab2">Organic Cotton Blend</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="hemp-blend" id="fab3">
+                                        <label class="form-check-label small" for="fab3">Hemp Blend</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item accordion-item-custom filter-card">
+                            <h2 class="accordion-header" id="fitHeading">
+                                <button class="accordion-button accordion-button-custom collapsed font-lato fw-bold text-teal-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFit" aria-expanded="false" aria-controls="collapseFit">
+                                    FIT / STYLE
+                                </button>
+                            </h2>
+                            <div id="collapseFit" class="accordion-collapse collapse" aria-labelledby="fitHeading" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body accordion-body-custom">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="fit" id="fit1" checked>
+                                        <label class="form-check-label small" for="fit1">Relaxed Fit</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="fit" id="fit2">
+                                        <label class="form-check-label small" for="fit2">Regular Fit</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="fit" id="fit3">
+                                        <label class="form-check-label small" for="fit3">Tailored</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mt-4 pt-3 border-top">
+                        <a href="#" class="btn btn-custom w-100 py-2 mb-2 fw-bold rounded-pill">APPLY FILTERS</a>
+                        <button href="#" class="btn btn-outline-dark w-100 py-2 small rounded-pill">Reset All</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <footer class="bg-teal-color text-beige-color pb-3 pt-5">
+    <section class="container px-5">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo-3.png" alt="Puro Heritage Logo" class="footer-logo me-3">
+                    <h5 class="fw-bold mb-0">PURO HERITAGE</h5>
+                </div>
+                <p class="small opacity-75 pe-4 text-beige-color">
+                    The finest European Flax woven into apparel that defines timelessness and enduring quality.
+                </p>
+                <div class="footer-social-icons fs-5 mt-3">
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon"><i class="bi bi-facebook text-beige-color"></i></a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon"><i class="bi bi-twitter text-beige-color"></i></a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon"><i class="bi bi-instagram text-beige-color"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="fw-bold mb-3">Customer Services</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li><a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">My Account</a></li>
+                    <li><a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Track Your Order</a></li>
+                    <li><a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">FAQ</a></li>
+                    <li><a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Our Information</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li><a href="about-us.html" class="text-beige-color text-decoration-none hover-text-teal-light">About us</a></li>
+                    <li><a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Privacy Policy</a></li>
+                    <li><a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Terms &amp; Condition</a></li>
+                    <li><a href="care-guide.html" class="text-beige-color text-decoration-none hover-text-teal-light">Linen Care Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Contact Info</h5>
+                <p class="small opacity-75 mb-1 text-beige-color">
+                    <a href="tel :123 456 7890">
+                        <i class="bi bi-telephone-fill me-2 text-beige-color"></i> +91-98765-43210
+                    </a>
+                </p>
+                <p class="font-lato small opacity-75 mb-1 text-beige-color">
+                    <a href="mailto :support@puroheritage.com">
+                        <i class="bi bi-envelope-fill me-2 text-beige-color"></i> support@puroheritage.com
+                    </a>
+                </p>    
+                <p class="font-lato small opacity-75 mt-3 text-beige-color">
+                    The Heritage Workshop,<br>
+                    14, Linen Quarter, <br>
+                    New Delhi, India
+                </p>
+            </div>
+        </div>
+ 
+    
+    <div class="copyright-bar py-3 mt-4 border-top border-teal-light">
+        <div class="container d-flex justify-content-between align-items-center small font-lato px-5">
+            <small>Copyright © 2025 PURO HERITAGE. All Rights Reserved.</small>
+            <div class="d-flex align-items-center">
+                <span class="me-3">English | ₹ INR</span>
+            </div>
+        </div>
+           </div>
+    </section>
+</footer>
+        
+        <script>
+               var rnginp = document.getElementById("rng_inp");
+                var rinp = document.getElementById("rng");
+                rinp.innerHTML = rnginp.value;
+                
+              
+                 rnginp.oninput = function(){
+                     rinp.innerHTML = this.value;
+                };
+        </script>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- Scroll Animation Observer Logic ---
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        element.classList.add('show-element');
+                        // Staggered effect: Adding a small delay to individual product cards
+                        if (element.classList.contains('col-lg-4')) {
+                            const index = Array.from(element.parentElement.children).indexOf(element);
+                            element.style.transitionDelay = `${(index % 3) * 0.1}s`; 
+                        }
+                        observer.unobserve(element);
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            // Set initial state (opacity 0 and slight translate Y for slide up) 
+            document.querySelectorAll('.animate__fade_in, .animate__slide_in_up').forEach(element => {
+                if (element.classList.contains('animate__slide_in_up')) {
+                    element.style.transform = 'translateY(50px)';
+                }
+                element.style.opacity = '0'; 
+                observer.observe(element);
+            });
+        });
+    </script>
+        
+        <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+        
+    </body>
+</html>

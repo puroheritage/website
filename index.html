@@ -1,0 +1,581 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puro Heritage</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="assets/bootstrap-5/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="assets/bootstrap-5/js/bootstrap.js"></script>
+</head>
+
+<body data-theme="d"> 
+    
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="">
+        <i class="fa-solid fa-arrow-up text-white"></i>
+    </button>
+    
+<header class="position-sticky top-0 z-2">
+    
+    <section class="py-2 bg-teal-color text-beige-color d-none d-md-block">
+    <div class="container">
+        <div class="row small px-5 justify-content-between">
+        <div class="col-md-6">
+            <a href="tel :123 456 8900" class="text-beige-color">
+                <i class="bi bi-telephone-fill me-2 text-beige-color"></i>
+            Call Us: 123 456 8900</a>
+            <span class="ms-4">|</span>
+            <i class="bi bi-geo-alt-fill me-2 ms-4 text-beige-color"></i>
+            Location: New Delhi, India
+        </div>
+        <div class="social-login col-md-6 text-right text-beige-color">
+            <span class="me-3">Sign up and GET 25% OFF on your first order.</span>
+            <a href="login.html" class="text-beige-color text-decoration-none fw-bold me-3 hover-text-teal">Sign Up Now</a>
+            <a href="#">
+                <i class="bi bi-facebook mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-twitter mx-1 text-beige-color"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-instagram mx-1 text-beige-color"></i>
+            </a>
+        </div>
+            </div>
+    </div>
+</section>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand text-uppercase logo" href="#">
+                <img src="assets/images/logo-2.png" alt="" width="40px" class="img-fluid"/>
+                Puro Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-custom" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item navigation-link">
+                        <a href="index.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>Home</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item navigation-link">
+                        <a href="about-us.html" class="nav-link text-uppercase rounded-5 mx-2" role="button"> <strong>About Us</strong>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="products.html" class="nav-link text-uppercase rounded-5 mx-2"> <strong>Shop</strong> </a> </li>
+                    
+                    <li class="nav-item navigation-link dropdown"> <a href="#" class="nav-link text-uppercase dropdown-toggle rounded-5 mx-2" id="navbardropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <strong>Apparel</strong> </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li> <a href="products.html" class="dropdown-item">Men</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Women</a> </li>
+                            <li> <a href="products.html" class="dropdown-item">Co-ords</a> </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item navigation-link"> <a href="contact-us.html" class=" nav-link text-uppercase rounded-5 mx-2"> <strong>contact</strong> </a> </li>
+                </ul>
+                <form class="d-flex">
+        <div class="search-container">
+        <input type="text" class="form-control search-input" placeholder="Search...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+      </form>
+                <div class="d-flex"> <a href="wishlist.html" class="text-decoration-none text-teal-color ms-3 me-3"><i class="fa-regular fa-heart"></i></a> <a href="checkout.html" class="text-decoration-none text-teal-color"><i class="fa-solid fa-cart-shopping"></i></a> </div>
+            <a href="login.html" class="btn btn-creative px-4 ms-4">Login</a>
+            </div>
+            
+        </div>
+    </nav>
+    
+</header>
+    
+<main>
+    
+    <section class="vh-100 hero-carousel animate__fade_in_down">
+            <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item carousel-item-1 active" style="background-image: url('assets/images/carousel-1.png');">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100 carousel-caption">
+                            <h2 class="fw-bold display-2 text-beige-color text-shadow-dark animate__slow_fade_in_down">The Timeless Collection</h2>
+                            <p class="text-beige-color fs-5 fw-light text-shadow-dark animate__slow_fade_in" data-delay="0.5s">A Legacy Woven In European Flax</p>
+                            <a href="products.html" class="btn btn-outline-light bg-beige-color rounded-pill px-4 btn-lg fw-bold mt-4 hover-scale animate__slow_fade_in_up" data-delay="0.8s">Discover The Line →</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-item-1" style="background-image: url('assets/images/carousel-2.png');">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                             <h1 class="fw-bold display-1 text-beige-color text-shadow-dark">Sustainability by Design</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-item-1" style="background-image: url('assets/images/carousel-3.png');">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                             <h1 class="fw-bold display-1 text-beige-color text-shadow-dark">The Art of Slow Fashion</h1>
+                        </div>
+                    </div>
+                    </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+    
+    <section class="bg-teal-color text-beige-color overflow-hidden">
+            <div class="scrolling-strip fw-bold display-6">
+                <span class="scrolling-text">PURO HERITAGE • SLOW FASHION • EUROPEAN FLAX • TIMELESS APPAREL • PURO HERITAGE • SLOW FASHION • EUROPEAN FLAX • TIMELESS APPAREL • </span>
+            </div>
+        </section>
+    
+    <section class="container text-center my-5 text-teal-color">
+        <div class="row">
+            <div class="value-item col-md-4 py-4 px-5 hover-up">
+                <i class="fa-solid fa-leaf"></i>
+                <h4>Natural Fibers</h4>
+                <p>Crafted from 100% sustainably sourced European Linen.</p>
+            </div>
+            <div class="value-item col-md-4 py-4 px-5 hover-up">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h4>Artisan Crafted</h4>
+                <p>Unmatched quality and detail, woven with traditional methods.</p>
+            </div>
+            <div class="value-item col-md-4 py-4 px-5 hover-up">
+                <i class="fa-solid fa-gem"></i>
+                <h4>Conscious Luxury</h4>
+                <p>Timeless pieces that are kind to the planet and luxurious on the skin.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="container-fluid py-5 my-5 bg-teal-color animate__slide_in_up">
+    <div class="container">
+        <div class="row g-0 align-items-center">
+            
+            <div class="col-lg-7 col-md-12 col-sm-12 p-5 text-beige-color about-text-block">
+                <p class="small text-teal-color letter-spacing-lg mb-2 fw-bold">OUR ETHOS &amp; LEGACY</p>
+                
+                <h2 class="fw-bold display-4 text-beige-color mb-4">
+                    We Weave Timelessness into Every Fibre.
+                </h2>
+                
+                <p class="lead text-beige-color opacity-75 pe-md-5">
+                    PURO HERITAGE is a dedication to Slow Fashion. We resist fleeting trends, focusing instead on longevity, minimal design, and the unparalleled quality of European Flax.
+                </p>
+                <p class="small text-beige-color opacity-50 pe-md-5">
+                    Our apparel is built to age gracefully, gaining character and softness with every passing season—a true legacy woven in linen.
+                </p>
+                
+                <a href="about-us.html" class="text-beige-color text-decoration-none fw-bold d-inline-block mt-4 border-bottom pb-1">
+                    DISCOVER OUR PHILOSOPHY
+                    <i class="fa-solid fa-arrow-right text-beige-color ms-1"></i>
+                </a>
+            </div>
+            
+            <div class="col-lg-5 col-md-12 col-sm-12 p-0 about-image-block">
+                <div class="about-visual-card" style="background-image: url('assets/images/about-sec-img.png');">
+                    <div class="text-overlay p-4">
+                        <span class="fw-bold fs-3 text-beige-color text-shadow-dark">European Flax | Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section id="categories" class="bg-light py-5 animate__slide_in_up part-heading">
+            <div class="container">
+                <h2 class="text-center mb-5">Shop By Category</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="category-card hover-up" style="background-image: url('assets/images/men-apparel.png');">
+                            <a href="products.html" class="category-link text-beige-color">
+                                Men's Apparel
+                                <i class="fa-solid fa-arrow-right text-beige-color ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="category-card hover-up" style="background-image: url('assets/images/women-line.png');">
+                            <a href="products.html" class="category-link text-cream">
+                                Women's Line
+                                <i class="fa-solid fa-arrow-right text-beige-color ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="category-card hover-up" style="background-image: url('assets/images/co-ords-set.png');">
+                            <a href="products.html" class="category-link text-cream">
+                                Co-ord Sets
+                                <i class="fa-solid fa-arrow-right text-beige-color ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <section id="essentials" class="container my-5 py-5 animate__slide_in_up part-heading">
+            <h2 class="text-center pb-5">Timeless Essentials</h2>
+            <div class="row g-4 product-grid-large">
+                <div class="col-lg-6">
+                    <div class="product-card-large hover-up" style="background-image: url('assets/images/signature-trousers.png');">
+                        <div class="card-content">
+                            <h4 class="display-5 fw-bold">The Signature Trousers</h4>
+                            <a href="products.html" class="btn btn-custom mt-3 hover-scale rounded-pill px-4">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-card-large hover-up h-50 mb-4" style="background-image: url('assets/images/boxy-shirt.png');">
+                        <div class="card-content">
+                            <h4 class="fw-bold">The Boxy Shirt</h4>
+                            <a href="products.html" class="btn btn-custom mt-3 hover-scale rounded-pill px-4">View</a>
+                        </div>
+                    </div>
+                    <div class="product-card-large hover-up h-50" style="background-image: url('assets/images/maxi-dress.png');">
+                        <div class="card-content">
+                            <h4 class="font-garamond fw-bold">The Maxi Dress</h4>
+                            <a href="products.html" class="btn btn-custom mt-3 hover-scale rounded-pill px-4">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <section id="new-arrivals" class="bg-teal-color py-5 animate__slide_in_up part-heading">
+            <div class="container text-center text-beige-color">
+                <h2 class="text-beige-color mb-5">New Arrivals</h2>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                         <div class="product-card product-card-light hover-up">
+                            <img src="assets/images/arrival-img1.png" class="img-fluid hover-scale-img" alt="Linen Jacket">
+                            <div class="p-3">
+                                <h5 class="fw-bold text-teal-color">The Architect Jacket</h5>
+                                <p class="small text-teal-color mb-0">₹ 14,999</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                         <div class="product-card product-card-light hover-up">
+                            <img src="assets/images/arrival-img2.png" class="img-fluid hover-scale-img" alt="Linen Top">
+                            <div class="p-3">
+                                <h5 class="fw-bold text-teal-color">The Effortless Top</h5>
+                                <p class="small text-teal-color mb-0">₹ 4,999</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                         <div class="product-card product-card-light hover-up">
+                            <img src="assets/images/arrival-img3.jpg" class="img-fluid hover-scale-img" alt="Linen Trousers">
+                            <div class="p-3">
+                                <h5 class="fw-bold text-teal-color">Heritage Trousers</h5>
+                                <p class="small text-teal-color mb-0">₹ 7,199</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                         <div class="product-card product-card-light hover-up">
+                            <img src="assets/images/arrival-img4.jpg" class="img-fluid hover-scale-img" alt="Linen Bag">
+                            <div class="p-3">
+                                <h5 class="fw-bold text-teal-color">The Day Tote</h5>
+                                <p class="small text-teal-color mb-0">₹ 12,500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="products.html" class="btn btn-outline-light text-beige-color arrival-btn btn-md px-4 fw-bold mt-5 rounded-pill">VIEW ALL NEW ARRIVALS
+                    <i class="fa-solid fa-arrow-right text-beige-color ms-1"></i>
+                </a>
+            </div>
+        </section>
+    
+    <section id="deal-of-the-day" class="py-5 bg-light text-center animate__fade_in part-heading">
+            <div class="container border border-3 p-5 ">
+                <h2 class="fw-bold display-3 text-teal-color">Deal of the Day</h2>
+                <p class="lead text-teal-color mb-4">The Natural Flax Shirt - 25% Off for 24 Hours Only.</p>
+                <h4><a href="products.html" class="btn btn-custom btn-lg fw-bold hover-scale px-5 rounded-pill">SHOP THE DEAL</a></h4>
+            </div>
+        </section>
+    
+    <section id="faq" class="container my-5 py-5 animate__slide_in_up part-heading">
+             <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+             <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold text-teal-color collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">How should I wash my linen garment?</button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body small text-muted">Always use a cold water, gentle cycle with mild liquid detergent. Avoid bleach and never tumble dry completely. For full details, see our Care Guide.</div>
+                            </div>
+                        </div>
+                         <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold text-teal-color collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">What is "European Flax"?</button>
+                             </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body small text-muted">European Flax refers to premium linen grown in Western Europe, certified for sustainable farming and processing, ensuring the highest quality fibre.</div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <section id="testimonials" class="bg-beige-color pt-5 animate__slide_in_up part-heading my-5 pb-4">
+            <div class="container">
+                <h2 class="text-center mb-5">Voices of Heritage</h2>
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item carousel-item-2 active text-center">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 testimonial-card p-4">
+                                    <i class="bi bi-quote fs-1 text-teal-light"></i>
+                                    <p class="font-garamond fst-italic fs-3 text-teal">"The quality deepens with every wash. True slow fashion, built to last a lifetime. Worth every rupee."</p>
+                                    <div class="small text-muted">— ANJALI K., MUMBAI</div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="carousel-item carousel-item-2 text-center">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 testimonial-card p-4">
+                                    <i class="bi bi-quote fs-1 text-teal-light"></i>
+                                    <p class="font-garamond fst-italic fs-3 text-teal">"The drape and fit are simply superb. It feels breathable and effortlessly elegant."</p>
+                                    <div class="small text-muted">— ROHIT V., BANGALORE</div>
+                                </div>
+                            </div>
+                        </div>
+                         </div>
+                </div>
+            </div>
+        </section>
+    
+</main>
+    
+<section class="py-4 border-top border-bottom bg-light py-5">
+        <div class="container px-5">
+            <div class="row text-center">
+                <div class="col-md-4 feature-item hover-up py-5">
+                    <i class="bi bi-box-seam fs-3 text-teal-color mb-2"></i>
+                    <h6 class="fw-bold text-teal-color mb-1">COMPLIMENTARY SHIPPING</h6>
+                    <p class="small text-muted mb-0">For all orders above ₹ 15,000.</p>
+                </div>
+                <div class="col-md-4 feature-item hover-up py-5">
+                    <i class="bi bi-credit-card fs-3 text-teal-color mb-2"></i>
+                    <h6 class="fw-bold text-teal-color mb-1">FLEXIBLE PAYMENT</h6>
+                    <p class="small text-muted mb-0">Secure multiple payment options.</p>
+                </div>
+                <div class="col-md-4 feature-item hover-up py-5">
+                    <i class="bi bi-headphones fs-3 text-teal-color mb-2"></i>
+                    <h6 class="fw-bold text-teal-color mb-1">BESPOKE SUPPORT</h6>
+                    <p class="small text-muted mb-0">We support you online all day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<footer class="bg-teal-color text-beige-color pb-3 pt-5">
+    <section class="container px-5">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo-3.png" alt="Puro Heritage Logo" class="footer-logo me-3">
+                    <h5 class="fw-bold mb-0">PURO HERITAGE</h5>
+                </div>
+                <p class="small opacity-75 pe-4 text-beige-color">
+                    The finest European Flax woven into apparel that defines timelessness and enduring quality.
+                </p>
+                <div class="footer-social-icons fs-5 mt-3">
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-facebook text-beige-color"></i>
+                    </a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-twitter text-beige-color"></i>
+                    </a>
+                    <a href="#" class="opacity-75 me-3 hover-scale-icon">
+                        <i class="bi bi-instagram text-beige-color"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="fw-bold mb-3">Customer Services</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">My Account</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Track Your Order</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Returns</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Our Information</h5>
+                <ul class="list-unstyled small opacity-75">
+                    <li>
+                        <a href="about-us.html" class="text-beige-color text-decoration-none hover-text-teal-light">About us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-beige-color text-decoration-none hover-text-teal-light">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                        <a href="care-guide.html" class="text-beige-color text-decoration-none hover-text-teal-light">Linen Care Guide</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="fw-bold mb-3">Contact Info</h5>
+                <p class="small opacity-75 mb-1 text-beige-color">
+                    <a href="tel :123 456 7890">
+                        <i class="bi bi-telephone-fill me-2 text-beige-color"></i>
+                        +91-98765-43210
+                    </a>
+                </p>
+                <p class="font-lato small opacity-75 mb-1 text-beige-color">
+                    <a href="mailto :support@puroheritage.com">
+                        <i class="bi bi-envelope-fill me-2 text-beige-color"></i>
+                        support@puroheritage.com
+                    </a>
+                </p>    
+                <p class="font-lato small opacity-75 mt-3 text-beige-color">
+                    The Heritage Workshop,<br>
+                    14, Linen Quarter, <br>
+                    New Delhi, India
+                </p>
+            </div>
+        </div>
+ 
+    
+    <div class="copyright-bar py-3 mt-4 border-top border-teal-light">
+        <div class="container d-flex justify-content-between align-items-center small font-lato px-5">
+            <small>Copyright © 2025 PURO HERITAGE. All Rights Reserved.</small>
+            <div class="d-flex align-items-center">
+                <span class="me-3">English | ₹ INR</span>
+            </div>
+        </div>
+           </div>
+    </section>
+</footer>
+
+<div class="container">
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-beige-color text-center text-teal-color">
+
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Join the Heritage</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="text-teal-color">Subscribe to our newsletter and get 10% Off your first timeless order.</p>
+                <form class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+              <div class="col-12 col-lg-8">
+            <label for="email-newsletter-component" class="visually-hidden">Email Address</label>
+            <input type="email" class="form-control rounded-pill ps-4 py-2" id="email-newsletter-component" value="" placeholder="Email Address" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help" required>
+          </div>
+          <div class="col-12 col-lg-3 text-center">
+            <button type="submit" class="btn btn-custom rounded-pill px-4 pb-2">Subscribe</button>
+          </div>
+        </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>   
+    
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- Scroll Animation Observer ---
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                
+                // Add show-element class to trigger CSS transition
+                element.classList.add('show-element');
+                observer.unobserve(element);
+            }
+        });
+    }, {
+        threshold: 0.1 
+    });
+
+    // Observe all scroll-animated sections
+    document.querySelectorAll('.animate__slide_in_up, .animate__fade_in, .animate__fade_in_down').forEach(element => {
+        // Set initial state for slide-up animation
+        if (element.classList.contains('animate__slide_in_up')) {
+            element.style.transform = 'translateY(50px)';
+        }
+        element.style.opacity = '0'; 
+        observer.observe(element);
+    });
+});
+    </script>
+    
+<script>
+    // 'DOMContentLoaded' 
+    document.addEventListener("DOMContentLoaded", function() {
+        // 5 sec (5000 ms)
+        setTimeout(function() {
+            // Modal insert element
+            var modalElement = document.getElementById('myModal');
+                
+            // Bootstrap Modal create object
+            var myModal = new bootstrap.Modal(modalElement);
+            
+            // Modal Open
+            myModal.show();
+        }, 500); 
+    });
+</script>
+    
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+    
+</body>
+</html>

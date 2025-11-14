@@ -499,10 +499,11 @@
                 <form class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
               <div class="col-12 col-lg-8">
             <label for="email-newsletter-component" class="visually-hidden">Email Address</label>
-            <input type="email" class="form-control rounded-pill ps-4 py-2 " id="email-newsletter-component" value="" placeholder="Email Address" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help" required>
+            <input type="email" class="form-control rounded-pill ps-4 py-2 " id="email-newsletter-component" value="" placeholder="Email Address" aria-label="email-newsletter-component" aria-describedby="email-newsletter-help">
+                  <small id="err_mail" class="text-left d-block mt-2 ms-4"></small>
           </div>
           <div class="col-12 col-lg-3 text-center">
-            <button type="submit" class="btn btn-custom rounded-pill px-4 pb-2">Subscribe</button>
+            <button type="submit" class="btn btn-custom rounded-pill px-4 pb-2" id="subs">Subscribe</button>
           </div>
         </form>
             </div>
@@ -542,6 +543,56 @@
     </script>
     
 <script>
+//      Email Address input_err
+    
+    
+    $(document).ready(function (){
+        
+        
+        let mail_check = true;
+        
+                $("#email-newsletter-component").keyup(function(){
+                    mail();
+                });
+                
+                function mail(){
+                    let mail_val = $("#email-newsletter-component").val();
+                    
+                    if(mail_val.length == ""){
+                        $("#err_mail").show();
+                        $("#err_mail").text("Please Enter your Email Address");
+                        $("#err_mail").css("color","red");
+                        mail_check = false;
+                        return false;
+                    }
+                    else {
+                        $("#err_mail").hide();
+                        $("#err_mail").text("");
+                    }
+                }
+        
+        
+        $("#subs").click(function(){
+            
+            
+                    mail_check = true;
+            
+                    mail();
+                    
+                    if(mail_check == true){
+                        myModal.hide();
+                        
+                    }
+                    else{
+                        return false;   
+                    }
+                });
+        
+        });
+    
+    
+    
+    
     // 'DOMContentLoaded' 
     document.addEventListener("DOMContentLoaded", function() {
         // 5 sec (5000 ms)
@@ -554,7 +605,8 @@
             
             // Modal Open
             myModal.show();
-        }, 500); 
+        }, 500);
+        
     });
 </script>
     
